@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 // https://en.wikipedia.org/wiki/Closest_pair_of_points_problem
-public class DistanceBetweenPointsDynamicProgramming {
+public class DistanceBetweenPoints {
 	public static void main(String[] args) throws IOException {
 
 		class XComparator implements Comparator<Point> {
@@ -42,14 +42,14 @@ public class DistanceBetweenPointsDynamicProgramming {
 		inputArray.add("0");
 		List<Point> pointsList = new ArrayList<Point>();
 		int N = new Integer(inputArray.get(0));
-		DistanceBetweenPointsDynamicProgramming classInstance = (new DistanceBetweenPointsDynamicProgramming());
+		DistanceBetweenPoints classInstance = (new DistanceBetweenPoints());
 		for (int i = 1; i < N + 1; i++) {
 			if (inputArray.get(i).equals("0"))
 				break;
 
 			String tempX = inputArray.get(i).split(" ")[0];
 			String tempY = inputArray.get(i).split(" ")[1];
-			DistanceBetweenPointsDynamicProgramming.Point tempPoint = classInstance.new Point(new Integer(tempX), new Integer(tempY));
+			DistanceBetweenPoints.Point tempPoint = classInstance.new Point(new Integer(tempX), new Integer(tempY));
 			pointsList.add(tempPoint);
 		}
 
